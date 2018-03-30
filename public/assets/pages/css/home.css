@@ -1,0 +1,61 @@
+.movies-schedule-body {
+	width: 80% !important;
+    	margin: 45px auto;
+}
+
+
+/*
+	Movies Schedule List
+	* Trnding Movies
+*/
+.schedule-movies .trending-movies h3 {
+	color: #f7f7f7;
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 700;
+	display: inline-block;
+	margin-bottom: 25px;
+	background-color: #281F10;
+}
+.schedule-movies .trending-movies .media  {
+	margin-right: 8px;
+}
+.schedule-movies .trending-movies .media img {
+	display: block;
+	width: auto;
+	height: 300px;
+}
+
+.schedule-movies .trending-movies .media .media-body h4 {
+	color: #555;
+	margin: 10px auto;
+	font-weight: 800;
+}
+
+/*
+	Latest Movies
+*/
+
+.schedule-movies .latest-movies h3 {
+	color: #f7f7f7;
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 700;
+	display: inline-block;
+	margin-bottom: 25px;
+	background-color: #281F10;
+}
+.schedule-movies .latest-movies .media  {
+	margin-right: 8px;
+}
+.schedule-movies .latest-movies .media img {
+	display: block;
+	width: auto;
+	height: 300px;
+}
+
+.schedule-movies .latest-movies .media .media-body h4 {
+	color: #555;
+	margin: 10px auto;
+	font-weight: 800;
+}

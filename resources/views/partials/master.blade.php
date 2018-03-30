@@ -1,0 +1,5 @@
+@include ('partials/header_inc')
+@include ('partials/header')
+@yield('content')
+@include ('partials/footer')
+@include ('partials/footer_inc')
