@@ -12,6 +12,7 @@ class BookTicketController extends Controller
     public function index(Movie $movie, Schedule $schedule)
     {
         // Return Movie And Schedule Details
+        // return $schedule;
         return view('book.index' , compact('movie',  'schedule'));
     }
 

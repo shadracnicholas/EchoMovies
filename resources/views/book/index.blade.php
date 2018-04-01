@@ -12,12 +12,13 @@
 		<div class="demo">
 			<div id="seat-map">
 				<div class="front">Select Screen Seat</div>
+				<div id="legend"></div>
 			</div>
 			<div class="booking-details">
 				<ul class="book-left">
 					<li>Movie </li>
 					<li>Time</li>
-					<li>Tickets</li>
+					<li>Date</li>
 					<li>Seats</li>
 					<li>Total</li>
 				</ul>
@@ -25,10 +26,10 @@
 					<li>: {{$movie->movie_title}}</li>
 					: <select>
 						@for($i=1; $i<=4; $i++)
-							<option>{{ $schedule["schdule_day_time_$i"] }}</option>
+						<option value="{{$schedule["schedule_day_time_$i"]}}">{{$schedule["schedule_day_time_$i"]}}</option>
 						@endfor	
 					</select>
-					<li>: {{$schedule["schedule_date"]}}</li>
+					<li>: {{ \Carbon\Carbon::parse($schedule["schedule_date"])->formatLocalized('%A, %d %B %Y') }}</li>
 					<li>: <span id="counter">0</span></li>
 					<li>: <b><i>Rs: </i><span id="total">0</span></b></li>
 				</ul>
@@ -37,7 +38,7 @@
 
 
 				<button class="checkout-button">Book Now</button>
-				<div id="legend"></div>
+				
 			</div>
 			<div style="clear:both"></div>
 		</div>
@@ -45,7 +46,7 @@
 @section('javascript')
 <!-- <script type="text/javascript" src="{{Route('home')}}/public/assets/pages/js/seatframe.js"></script> -->
 <script type="text/javascript">
-			var price = {!! $schedule["movie_ticket_price"] !!}; //price
+		var price = {!! $schedule["movie_ticket_price"] !!}; //price
 		$(document).ready(function() {
 			var $cart        = $('#selected-seats'), //Sitting Area
 				$counter = $('#counter'), //Votes
