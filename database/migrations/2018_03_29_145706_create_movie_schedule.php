@@ -16,13 +16,13 @@ class CreateMovieSchedule extends Migration
         Schema::create('movies_schedule', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('movie_id');
-            $table->string('schdule_day');
-            $table->string('schdule_date');
+            $table->string('schedule_day');
+            $table->date('schedule_date');
             $table->integer('movie_seats')->nullable($value = true)->default('50');
-            $table->string('schdule_day_time_1')->nullable($value = true)->default('---');
-            $table->string('schdule_day_time_2')->nullable($value = true)->default('---');
-            $table->string('schdule_day_time_3')->nullable($value = true)->default('---');
-            $table->string('schdule_day_time_4')->nullable($value = true)->default('---');
+            $table->string('schedule_day_time_1')->nullable($value = true)->default('---');
+            $table->string('schedule_day_time_2')->nullable($value = true)->default('---');
+            $table->string('schedule_day_time_3')->nullable($value = true)->default('---');
+            $table->string('schedule_day_time_4')->nullable($value = true)->default('---');
             $table->timestamps();
         });
     }

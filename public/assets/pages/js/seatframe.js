@@ -1,9 +1,9 @@
 		var price = 10; //price
 		$(document).ready(function() {
-			var $cart = $('#selected-seats'), //Sitting Area
+			var $cart        = $('#selected-seats'), //Sitting Area
 				$counter = $('#counter'), //Votes
-				$total = $('#total'); //Total money
-
+				$total      = $('#total'); //Total money
+				
 			var sc = $('#seat-map').seatCharts({
 				map: [  //Seating chart
 				'aaaaaaaaaa',

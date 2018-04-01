@@ -1,6 +1,6 @@
 .main {
 	width: 80% !important;
-    	margin: 45px auto;
+	margin: 45px auto;
 }
 
 div.seatCharts-row {
@@ -14,14 +14,25 @@ div.seatCharts-cell[role=checkbox] {
 	font-size: 20px;
 }
 
+div.seatCharts-cell {
+	line-height: 45px;
+	margin: 2px;
+	font-size: 20px;
+}
+
+.front {
+	margin: 0px 25px 20px 35px;
+	font-size: 20px;
+}
+
 .booking-details {
-    width: 42%;
+	width: 42%;
 }
 
 ul.book-left {
-    width: 10%;
+	width: 10%;
 }
 
 ul.book-right {
-    width: 85%;
+	width: 85%;
 }

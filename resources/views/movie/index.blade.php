@@ -39,34 +39,41 @@
 							<button type="button" class="btn btn-default " data-toggle="modal" data-target='#movieTrailer'>View Trailer</button>
 							<!-- Movie Schedule -->
 							<h3>Movie Schedule</h3>
-							<table class="table table-bordered table-responsive table-hover">
-								<thead class="bg-primary">
-									<tr>
-										<th>Day</th>
-										<th>Screen Time 1</th>
-										<th>Screen  Time 2</th>
-										<th>Screen Time 3</th>
-										<th>Screen Time 4</th>
-										<th>Screen Time 5</th>
-										<th>Screen Action</th>
-									</tr>
-								</thead>
-								<tbody>
-									@foreach($schedules as $schedule)
-										<tr class="text-center">
-											<td>{{$schedule->schdule_day}}</td>
-											<td>{{$schedule->schdule_day_time_1}}</td>
-											<td>{{$schedule->schdule_day_time_2}}</td>
-											<td>{{$schedule->schdule_day_time_3}}</td>
-											<td>{{$schedule->schdule_day_time_4}}</td>
-											<td>{{$schedule->schdule_day_time_5}}</td>
-											<td>
-												<a href="{{Route('home')}}/book/{{$movie->id}}/{{$schedule->id}}" class="btn btn-default">Book Now</a>
-											</td>
+							@if (count($schedules))
+								<table class="table table-bordered table-responsive table-hover">
+									<thead class="bg-primary">
+										<tr>
+											<th>Day</th>
+											<th>Date</th>
+											<th>Screen Time 1</th>
+											<th>Screen  Time 2</th>
+											<th>Screen Time 3</th>
+											<th>Screen Time 4</th>
+											<th>Screen Action</th>
 										</tr>
-									@endforeach
-								</tbody>
-							</table>
+									</thead>
+									<tbody>
+										@foreach($schedules as $schedule)
+											<tr class="text-center">
+												<td>{{$schedule->schedule_day}}</td>
+												<td>{{$schedule->schedule_date}}</td>
+												<td>{{$schedule->schedule_day_time_1}}</td>
+												<td>{{$schedule->schedule_day_time_2}}</td>
+												<td>{{$schedule->schedule_day_time_3}}</td>
+												<td>{{$schedule->schedule_day_time_4}}</td>
+												<td>
+													<a href="{{Route('home')}}/book/{{$movie->id}}/{{$schedule->id}}" class="btn btn-default">Book Now</a>
+												</td>
+											</tr>
+										@endforeach
+									@else
+										<div class="alert alert-danger">
+										 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+										 	<strong>Sorry!</strong> No Schedule Available For This Movie.....
+										 </div> 
+									</tbody>
+								</table>
+							@endif
 						</div> <!-- /.Col-md-8 -->
 					</div>	<!-- /.Row -->		
 				</div> <!-- /.Trending Movies -->

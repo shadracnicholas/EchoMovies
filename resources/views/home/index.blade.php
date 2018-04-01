@@ -17,7 +17,7 @@
 						<?php for($i=1; $i <= 8; $i++){ ?>
 							<div class="item">
 								<div class="media">
-									<a href="movie/1/Logan-(2017)">
+									<a href="movie/1/The Hangover (2009)">
 										<img class="media-object img-responsive" src="{{Route('home')}}/public/assets/movies_images/m-{{$i}}.jpg" alt="Image">
 									</a>
 									<div class="media-body text-center">
