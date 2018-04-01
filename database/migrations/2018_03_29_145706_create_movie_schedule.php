@@ -17,12 +17,12 @@ class CreateMovieSchedule extends Migration
             $table->increments('id');
             $table->integer('movie_id');
             $table->string('schdule_day');
+            $table->string('schdule_date');
+            $table->integer('movie_seats')->nullable($value = true)->default('50');
             $table->string('schdule_day_time_1')->nullable($value = true)->default('---');
             $table->string('schdule_day_time_2')->nullable($value = true)->default('---');
             $table->string('schdule_day_time_3')->nullable($value = true)->default('---');
             $table->string('schdule_day_time_4')->nullable($value = true)->default('---');
-            $table->string('schdule_day_time_5')->nullable($value = true)->default('---');
-
             $table->timestamps();
         });
     }

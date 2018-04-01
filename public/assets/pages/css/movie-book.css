@@ -1,0 +1,27 @@
+.main {
+	width: 80% !important;
+    	margin: 45px auto;
+}
+
+div.seatCharts-row {
+	height: 50px !important;
+}
+
+div.seatCharts-cell[role=checkbox] {
+	height: 50px;
+	width: 54px;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+.booking-details {
+    width: 42%;
+}
+
+ul.book-left {
+    width: 10%;
+}
+
+ul.book-right {
+    width: 85%;
+}

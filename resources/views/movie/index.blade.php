@@ -52,16 +52,16 @@
 									</tr>
 								</thead>
 								<tbody>
-									@foreach($schedules as $schedules)
+									@foreach($schedules as $schedule)
 										<tr class="text-center">
-											<td>{{$schedules->schdule_day}}</td>
-											<td>{{$schedules->schdule_day_time_1}}</td>
-											<td>{{$schedules->schdule_day_time_2}}</td>
-											<td>{{$schedules->schdule_day_time_3}}</td>
-											<td>{{$schedules->schdule_day_time_4}}</td>
-											<td>{{$schedules->schdule_day_time_5}}</td>
+											<td>{{$schedule->schdule_day}}</td>
+											<td>{{$schedule->schdule_day_time_1}}</td>
+											<td>{{$schedule->schdule_day_time_2}}</td>
+											<td>{{$schedule->schdule_day_time_3}}</td>
+											<td>{{$schedule->schdule_day_time_4}}</td>
+											<td>{{$schedule->schdule_day_time_5}}</td>
 											<td>
-												<a href="{{Route('home')}}/book/{{$movie->id}}/monday" class="btn btn-default">Book Now</a>
+												<a href="{{Route('home')}}/book/{{$movie->id}}/{{$schedule->id}}" class="btn btn-default">Book Now</a>
 											</td>
 										</tr>
 									@endforeach

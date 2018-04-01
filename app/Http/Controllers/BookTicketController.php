@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class BookTicketController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    // Show Movie Schedule And Book View
+    public function index(Movie $movie, Schedule $schedule)
     {
-        return view('book.index');
+        // Return Movie And Schedule Details
+        return view('book.index' , compact('movie',  'schedule'));
     }
 
     /**

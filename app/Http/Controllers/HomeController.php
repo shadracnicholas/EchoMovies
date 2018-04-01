@@ -22,7 +22,9 @@ class HomeController extends Controller
     	// Single Movie Details
 	public function movieDetails(Movie $movie)
 	{
+		// Get Schedule Of Current Movie
 		$schedules = Schedule::where('movie_id' , $movie->id)->get();
+		// Return Movie And Schedule Details
 		return view('movie.index' , compact('movie',  'schedules'));
 	}
 

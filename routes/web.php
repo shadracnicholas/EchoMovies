@@ -25,7 +25,7 @@ Route::get('movie/{movie}/{name}', [
 	'as'		=>	'movie_details'
 ]);
 
-Route::get('book/{id}/{day}', [
+Route::get('book/{movie}/{schedule}', [
 	'uses'	=>	'BookTicketController@index',
 	'as'		=>	'bookview'
 ]);

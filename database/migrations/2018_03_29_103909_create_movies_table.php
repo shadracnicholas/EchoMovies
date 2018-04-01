@@ -24,7 +24,7 @@ class CreateMoviesTable extends Migration
             $table->string('movie_stars_name');
             $table->string('movie_trailer_url')->nullable($value = true);
             $table->string('movie_poster')->default('movies_images/default.jpg');
-            $table->integer('movie_ticket_price');
+            $table->float('movie_ticket_price');
             $table->date('movie_released_date');
             $table->timestamps();
         });
