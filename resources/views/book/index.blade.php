@@ -127,13 +127,13 @@
 				alertify.confirm("Are You Sure To Book This Order?.",
 					function(){
 						var tempArray = [];
-						// #selected-seats li
 						$('#selected-seats li').each(function () {
 						    // Getting the id of each div
 						    var id = $(this).attr('id');
 						    // Add to the array
 						    tempArray.push("'"+id+"'");
 						});
+						// data Array
 						var data = {
 							time : $('#movie_time_select').val(),
 							counter : $('#counter').text(),
@@ -156,14 +156,12 @@
 						 else {
 							console.log(data);
 						}
-						/*# Validation */
 					},
 					function(){
 						alertify.error('Order Canceled!');
 				});
 			});
 		});
-
 </script>
 @endsection
 @endsection
