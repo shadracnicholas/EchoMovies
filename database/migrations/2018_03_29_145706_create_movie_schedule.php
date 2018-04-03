@@ -18,6 +18,7 @@ class CreateMovieSchedule extends Migration
             $table->integer('movie_id');
             $table->string('schedule_day');
             $table->date('schedule_date');
+            $table->integer('movie_ticket_price');
             $table->integer('movie_seats')->nullable($value = true)->default('50');
             $table->string('schedule_day_time_1')->nullable($value = true)->default('---');
             $table->string('schedule_day_time_2')->nullable($value = true)->default('---');

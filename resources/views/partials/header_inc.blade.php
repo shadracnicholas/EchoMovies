@@ -13,6 +13,7 @@
 	<link href="{{Route('home')}}/public/assets/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Plugins -->
 	<link href="{{Route('home')}}/public/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{Route('home')}}/public/assets/plugins/alertify/css/alertify.min.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Page Level stylesheet -->
 	@yield('stylesheet')
 </head>

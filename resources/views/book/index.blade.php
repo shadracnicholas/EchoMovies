@@ -124,8 +124,9 @@
 			$(document).on('click', '.checkout-button', function(event) {
 				event.preventDefault();
 				/* Act on the event */
-				alertify.confirm("Are You Sure To Book This Order?.",
+				alertify.confirm("Are You Sure To Book This Order?",
 					function(){
+						// Get Id Values Of Selected Seats
 						var tempArray = [];
 						$('#selected-seats li').each(function () {
 						    // Getting the id of each div
@@ -144,7 +145,7 @@
 							seats: tempArray.join(","),
 						}
 						// #Validation
-						if (data.time == '') {
+						if (data.time == '' || data.time == '---') {
 							alertify.error('Please Select Movie Time!');
 						} else if(data.name == '') {
 							alertify.error('Please Enter Your Full Name!');

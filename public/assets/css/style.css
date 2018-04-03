@@ -477,3 +477,12 @@ ul.book-right li {
 		font-size: 13px;
 	}
 }
+
+
+/*
+	Custom
+*/
+
+.ajs-message {
+	color: #fff !important;
+}

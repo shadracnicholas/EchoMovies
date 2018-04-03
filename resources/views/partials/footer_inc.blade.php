@@ -4,6 +4,7 @@
 	<script type="text/javascript" src="{{Route('home')}}/public/assets/js/jquery.nicescroll.js"></script>
 	<!-- Plugins -->
 	<script type="text/javascript" src="{{Route('home')}}/public/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="{{Route('home')}}/public/assets/plugins/alertify/alertify.min.js"></script>
 	<!-- Custom Script -->
 	<script type="text/javascript" src="{{Route('home')}}/public/assets/js/scripts.js"></script>
 	<!-- Page Level Script -->

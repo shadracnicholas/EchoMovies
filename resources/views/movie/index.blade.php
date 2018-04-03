@@ -29,7 +29,7 @@
 							<div class="details">
 								<p><b>Director: </b> {{$movie->movie_director_name}}</p>
 								<p><b>Stars: </b> {{$movie->movie_stars_name}}</p>
-								<p><b>Details:</b> 
+								<p><b>Details: </b> 
 									<span class="time">{{$movie->movie_watch_time}} | </span> 
 									<span class="category"> {{$movie->movie_category}} | </span> 
 									<span class="released"> {{$movie->movie_released_date}}</span>
@@ -42,7 +42,7 @@
 							@if (count($schedules))
 								<table class="table table-bordered table-responsive table-hover">
 									<thead class="bg-primary">
-										<tr>
+										<tr class="text-center">
 											<th>Day</th>
 											<th>Date</th>
 											<th>Screen Time 1</th>
@@ -69,7 +69,7 @@
 									@else
 										<div class="alert alert-danger">
 										 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-										 	<strong>Sorry!</strong> No Schedule Available For This Movie.....
+										 	<p><strong>Sorry!</strong> No Schedule Available For This Movie.....</p>
 										 </div> 
 									</tbody>
 								</table>
@@ -80,7 +80,6 @@
 			</div> <!-- /.Col-md-12 -->
 		</div> <!-- /.Row -->
 	</div> <!-- /.Main -->
-</div> <!-- /.Content -->
 
 <!-- /.Trailer Modal -->
 <div class="modal fade" id="movieTrailer">
