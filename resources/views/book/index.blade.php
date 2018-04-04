@@ -143,6 +143,7 @@
 							movieId:  {!! $schedule["movie_id"] !!},
 							scheduleId:  {!! $schedule["id"] !!},
 							seats: tempArray.join(","),
+							_token : $('meta[name="csrf-token"]').attr('content'),
 						}
 						// #Validation
 						if (data.time == '' || data.time == '---') {
@@ -155,7 +156,24 @@
 							alertify.error('Please Enter Your Phone Number!');
 						}
 						 else {
-							console.log(data);
+						 	$.ajaxSetup({
+							      headers: {
+							            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+							       }
+							});
+							$.ajax({
+								url: '{!! route("bookTicket") !!}',
+								type: 'POST',
+								data: data,
+								// Callback functions
+								beforeSend: function() {
+									$('.checkout-button').html('Please Wait... <span class="fa fa-spin fa-spinner"></span>');
+								},
+								success: function(resp) {
+									$('.checkout-button').html(' ').html('Order Confirmed <span class="fa fa-check"></span>');
+									alertify.success('Order Booked. Please Wait For Order Confirmation.');
+								}
+							});
 						}
 					},
 					function(){

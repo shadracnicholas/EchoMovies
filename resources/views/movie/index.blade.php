@@ -62,7 +62,7 @@
 												<td>{{$schedule->schedule_day_time_3}}</td>
 												<td>{{$schedule->schedule_day_time_4}}</td>
 												<td>
-													<a href="{{Route('home')}}/book/{{$movie->id}}/{{$schedule->id}}" class="btn btn-default">Book Now</a>
+													<a href="{{Route('home')}}/book/{{$movie->id}}/{{$schedule->id}}/" class="btn btn-default">Book Now</a>
 												</td>
 											</tr>
 										@endforeach

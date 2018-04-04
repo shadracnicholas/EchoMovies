@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Movie;
 use App\Schedule;
+use App\BookTicket;
 use Illuminate\Http\Request;
 
 class BookTicketController extends Controller
@@ -12,37 +13,27 @@ class BookTicketController extends Controller
     public function index(Movie $movie, Schedule $schedule)
     {
         // Return Movie And Schedule Details
-        // return $schedule;
+        $data = BookTicket::where('movie_id' , $movie->id)
+                                        ->where('schedule_id' , $schedule->id)
+                                        ->groupBy('ticket_plan')
+                                        ->get();
+        return $data;
         return view('book.index' , compact('movie',  'schedule'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        // Initalize And Save
+        $data = BookTicket::BookTicket($request);
+        
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
